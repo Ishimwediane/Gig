@@ -1,13 +1,17 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import dotenv from "dotenv";
+import dotenv from 'dotenv';
+import cors from 'cors'; // ✅ NEW: Import CORS
 import mainRouter from './routes/indexRouting.js';
 
 dotenv.config();
 
 const app = express();
 
-// Use Express's built-in parsers instead of bodyParser
+// ✅ Enable CORS for all requests (important for React frontend)
+app.use(cors());
+
+// Use Express's built-in parsers
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -20,7 +24,8 @@ const db_port = process.env.PORT || 3000;
 // Build MongoDB connection string
 const dbUri = `mongodb+srv://${db_user}:${db_pass}@cluster0.0hhji.mongodb.net/${db_name}?retryWrites=true&w=majority&appName=Cluster0`;
 
-mongoose.set("strictQuery", false);
+mongoose.set('strictQuery', false);
+
 mongoose.connect(dbUri)
   .then(() => {
     console.log("✅ Connected to MongoDB");
@@ -33,4 +38,4 @@ mongoose.connect(dbUri)
   });
 
 // Main route handler
-app.use("/", mainRouter);
+app.use('/', mainRouter);
