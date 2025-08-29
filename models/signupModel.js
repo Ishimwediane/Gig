@@ -19,7 +19,7 @@ const userSchema = Schema({
     Role: {
         type: String,
         default: "user",
-        enum: ["user", "admin", "freelancer"], // Changed "Admin" to "admin"
+        enum: ["user", "admin", "freelancer", "client"], // Added "client" role
         required: true
     },
     tokens: {
