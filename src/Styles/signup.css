@@ -1,0 +1,389 @@
+/* CreateAccountForm.css */
+
+.create-account-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f2fe 0%, #c5cae9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.create-account-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+  width: 100%;
+  max-width: 28rem;
+}
+
+.create-account-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header-icon {
+  background-color: #e8eaf6;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.header-icon .icon {
+  width: 2rem;
+  height: 2rem;
+  color: #3f51b5;
+}
+
+.header-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 0.5rem 0;
+}
+
+.header-subtitle {
+  color: #6b7280;
+  margin: 0;
+}
+
+.create-account-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 3rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  ring: 2px;
+  ring-color: #3f51b5;
+  border-color: #3f51b5;
+  box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
+}
+
+.form-input.error {
+  border-color: #ef4444;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+/* Role Selection Styles */
+.role-selection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.role-option {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.role-option:hover {
+  border-color: #9ca3af;
+}
+
+.role-option.selected {
+  border-color: #3f51b5;
+  background-color: #f3f4f6;
+}
+
+.role-radio {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.radio-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid #d1d5db;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.radio-indicator.checked {
+  border-color: #3f51b5;
+  background-color: #3f51b5;
+}
+
+.radio-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.role-content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.role-icon-wrapper {
+  margin-right: 0.75rem;
+  color: #9ca3af;
+  transition: color 0.2s ease-in-out;
+}
+
+.role-icon-wrapper.selected {
+  color: #3f51b5;
+}
+
+.role-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.role-details {
+  flex: 1;
+}
+
+.role-name {
+  font-weight: 500;
+  color: #111827;
+  transition: color 0.2s ease-in-out;
+}
+
+.role-name.selected {
+  color: #1e3a8a;
+}
+
+.role-description {
+  font-size: 0.875rem;
+  color: #6b7280;
+  transition: color 0.2s ease-in-out;
+}
+
+.role-description.selected {
+  color: #3730a3;
+}
+
+/* Button Styles */
+.button-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.reset-button {
+  flex: 1;
+  background-color: #e5e7eb;
+  color: #374151;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 1rem;
+}
+
+.reset-button:hover {
+  background-color: #d1d5db;
+}
+
+.submit-button {
+  flex: 1;
+  background-color: #3f51b5;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 1rem;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #303f9f;
+}
+
+.submit-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
+}
+
+.submit-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.loading-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.spinner {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid white;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.form-footer {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.required-note {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Success Screen Styles */
+.text-center {
+  text-align: center;
+}
+
+.success-icon {
+  background-color: #dcfce7;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.success-icon .icon {
+  width: 2rem;
+  height: 2rem;
+  color: #16a34a;
+}
+
+.success-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 0.5rem 0;
+}
+
+.success-subtitle {
+  color: #6b7280;
+  margin: 0 0 1.5rem 0;
+}
+
+.account-summary {
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.summary-content {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.summary-content p {
+  margin: 0.25rem 0;
+}
+
+.summary-content strong {
+  color: #111827;
+}
+
+.success-button {
+  width: 100%;
+  background-color: #3f51b5;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-size: 1rem;
+}
+
+.success-button:hover {
+  background-color: #303f9f;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .create-account-container {
+    padding: 0.5rem;
+  }
+  
+  .create-account-card {
+    padding: 1.5rem;
+  }
+  
+  .header-title {
+    font-size: 1.5rem;
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+}
